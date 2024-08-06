@@ -8,11 +8,15 @@ import { HiHomeModern } from "react-icons/hi2";
 import { RxHome } from "react-icons/rx";
 import { FcAbout } from "react-icons/fc";
 import { SiAboutdotme } from "react-icons/si";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
+  const pathname =usePathname()
+
+  
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <div className="sticky top-0">
@@ -45,7 +49,7 @@ function Navbar() {
             {["/", "/about", "/resume" , "/contact"].map((path) => (
               <li
                 key={path}
-                className={router.pathname === path ? "bg-white p-2" : "p-2"}
+                className={pathname === path ? "p-2" : "p-2"}
               >
                 <Link href={path}>
                   {path === "/" ? (
@@ -56,7 +60,7 @@ function Navbar() {
                     //   className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12 "
                     //   alt="Home"
                     // />
-                    <h2 className={`text-center justify-center mt-2 text-2xl transition-all font-extralight hover:underline hover:delay-150 `}>{router.pathname}Home</h2>
+                     <h2 className={`text-center justify-center mt-2 text-2xl transition-all font-extralight hover:underline hover:delay-150 ${pathname === path? "font-black text-3xl" :""} `}>Home</h2>
                     // <RxHome className="h-10 ease-in-out duration-300 w-10 text-black hover:w-16 hover:h-16" size={50}/>
                   ) : path === "/about" ? (
                     // <Image
@@ -66,7 +70,7 @@ function Navbar() {
                     //   className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12"
                     //   alt="About"
                     // />
-                    <h2 className="text-center justify-center mt-2 text-2xl transition-all font-extralight hover:underline hover:delay-150">{router.pathname}About</h2>
+                    <h2 className={`text-center justify-center mt-2 text-2xl transition-all font-extralight hover:underline hover:delay-150 ${pathname === path? "font-black text-3xl" :""}`}>About</h2>
 
                     // <SiAboutdotme className="h-10 ease-in-out duration-300 w-10 text-black hover:w-16 hover:h-16" size={50} />
                   ) : path === "/resume" ? (
@@ -77,7 +81,7 @@ function Navbar() {
                     //   className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12"
                     //   alt="Projects"
                     // />
-                    <h2 className="text-center justify-center mt-2 text-2xl transition-all font-extralight hover:underline hover:delay-150">Resume</h2>
+                    <h2 className={`text-center justify-center mt-2 text-2xl transition-all font-extralight hover:underline hover:delay-150 ${pathname === path? "font-black text-3xl" :""}`}>Resume</h2>
 
                   ) : path === "/contact" ? (
                     // <Image
@@ -87,7 +91,7 @@ function Navbar() {
                     //   className="h-10 ease-in-out duration-300 w-10 hover:w-12 hover:h-12"
                     //   alt="Contact"
                     // />
-                    <h2 className="text-center justify-center mt-2 text-2xl transition-all font-extralight hover:underline hover:delay-150">Contact Me</h2>
+                    <h2 className={`text-center justify-center mt-2 text-2xl transition-all font-extralight hover:underline hover:delay-150 ${pathname === path? "font-black text-3xl" :""}`}>Contact Me</h2>
 
                   ) : (
                     path.substring(1).charAt(0).toUpperCase() + path.slice(2)
