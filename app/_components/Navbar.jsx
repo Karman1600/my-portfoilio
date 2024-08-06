@@ -42,7 +42,7 @@ function Navbar() {
               isOpen ? "hidden" : "block"
             } flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 gap-7`}
           >
-            {["/", "/about", "/contact"].map((path) => (
+            {["/", "/about", "/resume" , "/contact"].map((path) => (
               <li
                 key={path}
                 className={router.pathname === path ? "bg-white p-2" : "p-2"}
