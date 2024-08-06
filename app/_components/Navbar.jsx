@@ -24,7 +24,7 @@ function Navbar() {
         <div className="container mx-auto flex flex-wrap justify-between items-center">
           <a href="/" className="text-xl font-bold">
             {/* <img src="logo.png" className="h-auto max-w-xs w-56" alt="" /> */}
-            <h2 className="text-center justify-center mt-2 text-4xl transition-all font-mono hover:delay-150">Karmnapartap's Portfolio</h2>
+            <h2 className="text-center justify-center mt-2 text-4xl transition-all font-mono hover:delay-150">Karmanpartap's Portfolio</h2>
 
           </a>
 
