@@ -7,7 +7,7 @@ function page() {
       <div className="flex ml-10 align-center text-center font-bold text-5xl mt-8 ">
         Resume
       </div>
-      {/* <iframe className="justify-center items-center m-auto" src="/" width="1080px" height="600px"></iframe> */}
+      <iframe className="justify-center items-center m-auto" src="/resume.pdf" width="1080px" height="600px"></iframe>
     </div>
   </div>
   )
