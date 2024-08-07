@@ -2,13 +2,9 @@
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
-  const audioRef = useRef();
   const [onLoad, setOnLoad] = useState(false);
 
   useEffect(() => {
-    if(audioRef.current){
-      audioRef.current.play()
-    }
     setOnLoad(true);
   }, []);
 
@@ -40,7 +36,6 @@ export default function Home() {
             can make a difference.
           </p>
         </div>
-        <audio ref={audioRef} src="/onLoad.mp3">Hello</audio>
       </div>
     </div>
   );
