@@ -15,7 +15,7 @@ export default function Home() {
         src="/myself.jpg"
         alt="Myself"
       />
-      <div className="flex rounded h-full overflow-hidden shadow-lg mt-52 mb-72">
+      <div className="flex rounded h-full overflow-hidden shadow-lg mt-44 mb-72">
         <div className="px-0 py-0">
           <p className="flex font-poppins mb-5 text-3xl justify-start">
             Software Developer
